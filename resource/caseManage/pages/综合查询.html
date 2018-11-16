@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合查询</title>
+    <!--<link rel="stylesheet/less" type="text/css" href="../less/base.less">-->
+    <!--<link rel="stylesheet"  href ="https://at.alicdn.com/t/font_576277_4fmgkjes0mgqfr.css">-->
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <script type="text/javascript" src="../jsOther/jquery.min.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!--<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href=".././css/common.css" />
+    <link rel="stylesheet" type="text/css" href=".././css/caseList.css"/>
+    <link rel="stylesheet" type="text/css" href=".././css/mapLayer.css"/>
+    <link rel="stylesheet" type="text/css" href=".././css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+
+</head>
+<body>
+<div class="top-bar-head">
+    <div class="header-more">
+        <span></span>
+    </div>
+    <div class="header-logo">
+        <span class="logo"></span>
+        <h1>视频云+大数据应用平台</h1>
+    </div>
+    <dl class="header-pane header-nav">
+        <dd><a>立体化防控</a></dd>
+        <dd><a>资源检索</a></dd>
+        <dd><a>布防布控</a></dd>
+        <dd><a>告警查询</a></dd>
+        <dd><a>智能挖掘</a></dd>
+        <dd><a>一人一档</a></dd>
+        <dd><a>统计分析</a></dd>
+        <dd><a>运维管理</a></dd>
+        <dd><a>绩效设计</a></dd>
+    </dl>
+    <ul class="header-pane header-right">
+        <li><span>一键禁用</span><i class="icon fa  fa-toggle-on"></i></li>
+        <li><i class="icon-item  fa  fa-user-o" style="font-size: 16px"></i><span>系统管理员</span></li>
+        <li><i class="icon-item  fa  fa-power-off"  style="font-size: 18px"></i></li>
+    </ul>
+</div>
+<div class="search-page">
+    <div class="search-con">
+        <div class="search-head">
+            <h1>综合查询</h1>
+            <div class="search-bar">
+                <div class="sh-btn">
+                    <a class="s-sel">姓名</a>
+                    <a >证件号</a>
+                    <a >手机号</a>
+                    <a >车牌号</a>
+                    <a >Mac地址</a>
+                    <a>案件号</a>
+                    <a>IMSI</a>
+                </div>
+                <div class="sh-inputs">
+                    <input type="text" class="s-input">
+                    <button>搜索</button>
+                    <div class="photo-img"></div>
+                </div>
+            </div>
+        </div>
+        <div class="find-bar">
+            <p>为你找到相关结果约 <i>56</i> 个</p>
+            <div class="icon"></div>
+            <select name="" id="">
+                <option value="">黑色</option>
+            </select>
+            <select name="" id="">
+                <option value="">本田</option>
+            </select>
+        </div>
+        <div class="car-lists">
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit" onclick="location.href='./车辆档案.html'"><b>粤A9XSHD</b>4</p>
+                    <p onclick="location.href='./车辆档案.html'">品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p onclick="location.href='./人员档案.html'">
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="./车辆档案.html" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit" onclick="location.href='./车辆档案.html'"><b>粤A9XSHD</b>4</p>
+                    <p onclick="location.href='./车辆档案.html'">品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p onclick="location.href='./人员档案.html'">
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="./车辆档案.html" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit" onclick="location.href='./车辆档案.html'"><b>粤A9XSHD</b>4</p>
+                    <p onclick="location.href='./车辆档案.html'">品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p onclick="location.href='./人员档案.html'">
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="./车辆档案.html" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit" onclick="location.href='./车辆档案.html'"><b>粤A9XSHD</b>4</p>
+                    <p onclick="location.href='./车辆档案.html'">品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p onclick="location.href='./人员档案.html'">
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="./车辆档案.html" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit"><b>粤A9XSHD</b>4</p>
+                    <p>品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p>
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit"><b>粤A9XSHD</b>4</p>
+                    <p>品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p>
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit"><b>粤A9XSHD</b>4</p>
+                    <p>品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p>
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit"><b>粤A9XSHD</b>4</p>
+                    <p>品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p>
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit"><b>粤A9XSHD</b>4</p>
+                    <p>品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p>
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit"><b>粤A9XSHD</b>4</p>
+                    <p>品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p>
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit"><b>粤A9XSHD</b>4</p>
+                    <p>品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p>
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+            <dl class="one-car">
+                <dt>
+                    <img src="../dashujImage/car-w.png" alt="">
+                </dt>
+                <dd>
+                    <p class="p-tit"><b>粤A9XSHD</b>4</p>
+                    <p>品牌（本田-凌派-2016），级色（黑），车型（小型轿车）</p>
+                    <p>
+                        <span>车主（<i>173834744345</i>）,</span><span>性别（男），</span><span>身份证号（3463848458454），</span><span>手机号码（<i>173834744345</i>）</span>，
+                        <span>籍贯（广东广州），</span><span>关联MAC（DU:GU:KE:WE:AK）,</span><span>关联疑似IMSI（848575878），</span><span>关联案件</span>
+                    </p>
+                    <a href="" class="s_detail">查看详情 >></a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+</html>

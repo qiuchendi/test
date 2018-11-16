@@ -1,0 +1,974 @@
+
+
+/* 结构布局 start */
+.pager-wrap {
+    overflow: auto;
+    background: #e7ecf0;
+    height: 100%;
+}
+.fifler-group{
+	display: inline-block;
+	width: 250px;
+	height: 32px;
+}
+.search-input {
+	line-height: 32px;
+	padding-left: 10px;
+}
+
+
+.case-header {
+	height: 90px;
+	padding: 15px 0;
+	background-color: #fff;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 68px ;
+	z-index: 10;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+se-content-wrap {
+	min-height: 100%;
+	position: relative;
+}
+.case-content {
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 105px;
+}
+
+.case-content-aside,
+.case-content-aside-small {
+	background-color: #fff;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	top: 173px;
+	overflow-y: auto;
+}
+.case-content-aside {
+	width: 340px;
+}
+.case-content-aside-small {
+	width: 230px;
+}
+.case-content-main,
+.case-content-main-small {
+	position: relative;
+	min-height: 100%;
+	background-color: #fff;
+	/*background: #e7ecf0;*/
+	/*min-height: 500px;*/
+}
+.case-content-main {
+	margin: 68px 15px 0 355px;
+}
+.case-content-main-small {
+	margin: 0 15px 0 245px;
+	overflow-x: hidden;
+	padding: 0;
+}
+
+.case-import-main {
+	position: absolute;
+	left: 355px;
+	right: 15px;
+	top: 0;
+	bottom: 15px;
+}
+/* 结构布局 end */
+
+
+
+
+/* 返回 + title start */
+.case-back-title {
+	line-height: 60px;
+}
+.case-back-btn {
+	font-size: 14px;
+	color: #6e7482;
+	padding: 0 20px;
+	border-right: 1px solid #e1e1e1;
+	cursor: pointer;
+}
+.case-header-title {
+	font-size: 20px;
+    color: #333;
+	padding-left: 20px;
+}
+/* 返回 + title end */
+
+
+/* 头部 tab start */
+.case-tab-box {
+	width: 1000px;
+	height: 60px;
+	position: absolute;
+	left: 50%;
+	top: 15px;
+	margin-left: -430px;
+}
+.case-tab-box .case-tab-wrap {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.case-tab-box .case-tab-list {
+	position: relative;
+	float: left;
+	text-align: center;
+	margin-right: 150px;
+	z-index: 10;
+	width: 100px;
+	cursor: pointer;
+}
+.case-tab-box .tab-circle {
+	width: 28px;
+	height: 28px;
+	border: 1px solid #cbcbcb;
+	border-radius: 100%;
+	background-color: #fff;
+	line-height: 28px;
+	display: block;
+	margin: 6px auto 8px;
+	font-size: 16px;
+	position: relative;
+	z-index: 10;
+}
+.case-tab-box .tab-circle b {
+	font-style: normal;
+	font-weight: normal;
+}
+.case-tab-box .tab-text {
+	color: #747474;
+	font-weight: normal;
+}
+.case-tab-box .case-tab-line:after {
+	content: '';
+    height: 1px;
+    width: 250px;
+    background-color: #ccc;
+    position: absolute;
+    left: 37px;
+    top: 20px;
+    z-index: 9;
+}
+.case-tab-box .case-tab-list.active .tab-circle {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 auto 2px;
+	background-color: #4c72d5;
+	color: #fff;
+}
+.case-tab-box .case-tab-list.active-has .tab-circle {
+	border-color: #4c72d5;
+	color: #4c72d5;
+}
+.case-tab-box .active-has:after {
+	background-color: #4c72d5;
+}
+.case-tab-box .case-tab-list.active .tab-circle {
+	background: #fff url('../images/icon.png') no-repeat 0 0;
+}
+.case-tab-box .case-tab-list.active .tab-circle b {
+	display: none;
+}
+.case-tab-box .case-tab-match.active .tab-circle {
+	background-position:  -21px -21px;
+}
+.case-tab-box .case-tab-import.active .tab-circle {
+	background-position:  -81px -21px;
+}
+.case-tab-box .case-tab-analyse.active .tab-circle {
+	background-position:  -141px -21px;
+}
+.case-tab-box .case-tab-export.active .tab-circle {
+	background-position:  -201px -21px;
+}
+/*  头部 tab end */
+
+
+/*步骤 start*/
+.prev-next-step {
+	position: absolute;
+	color: #4c72d3;
+	width: 110px;
+	line-height: 32px;
+	top: 14px;
+	text-align: center;
+}
+.prev-next-step i {
+	position: relative;
+    top: 4px;
+    font-size: 20px;
+}
+.prev-step {
+	left: -110px;
+}
+.next-step {
+	right: -110px;
+}
+/*步骤 end*/
+
+
+
+
+
+/* 匹配模型 start*/
+/*case-content-aside start*/
+.case-aside-style h5 {
+	line-height: 48px;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 0;
+	font-size: 16px;
+	text-indent: 20px;
+	margin: 0;
+}
+.case-info {
+	padding: 10px 0 0 20px;
+}
+.form-box-wrap .case-info .form-box-list > label{
+	width: 91px;
+}
+.brief-case-label {
+	margin-left: -6px;
+}
+.brief-case {
+	display: block;
+	padding-right: 20px;
+	word-break:break-all;
+}
+
+.case-label-wrap {
+	padding-left: 20px;
+	margin-top: 5px;
+}
+.case-label-wrap label {
+	color: #989898;
+	font-weight: normal;
+}
+.case-label-list {
+	padding: 0;
+	margin: 0;
+}
+.case-label-list li {
+	display: inline-block;
+	background-color: #cdcdcd;
+	border-radius: 4px;
+	color: #fff;
+	padding: 4px 8px;
+	margin: 8px 5px 0 0;
+}
+/*case-content-aside end*/
+/*case-item-wrap start*/
+
+.case-item-wrap {
+	width: 100%;
+	padding: 20px;
+}
+.case-item-wrap .case-item-list {
+	width: 18%;
+	border: 1px solid #e8e8e8;
+	border-radius: 4px;
+	height: 140px;
+	float: left;
+	cursor: pointer;
+	margin: 0 2% 30px 0;
+}
+.case-item-wrap .case-item-list.active {
+	border-color: #a4b8ea;
+	background: url('../images/case-select.png') no-repeat right top;
+}
+.list-title-text {
+	margin: 15px auto;
+	width: 80%;
+	height: 100px;
+	text-align: center;
+}
+.list-title-text > .list-title {
+	display: block;
+	padding: 20px 0;
+	color: #333;
+	font-size: 16px;
+}
+.list-title-text .list-title > span {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	border-radius: 100%;
+	color: #fff;
+	margin-right: 8px;
+	font-size: 12px;
+}
+.list-title-text .list-title .type-steal {
+	background-color: #4d73d6;
+}
+.list-title-text .list-title .type-module {
+	background-color: #ffa53a;
+}
+.list-title-text .list-title .type-nature {
+	background-color: #36ae88;
+}
+.list-title-text .list-title .type-area {
+	background-color: #a877c8;
+}
+.list-title-text .list-title .type-yi {
+	background-color: #4c72d5;
+}
+.list-title-text .list-text {
+	margin: 0;
+	color: #999;
+}
+
+/*case-item-wrap end*/
+.case-confirm {
+	padding: 20px 0;
+	text-align: center;
+}
+.case-confirm .case-confirm-btn {
+	background-color: #4c72d5;
+	color: #fff;
+	padding: 6px 40px;
+	border-radius: 4px;
+}
+/* 匹配模型end*/
+
+
+
+
+
+/* 输入模型条件 case-import start */
+.case-import .case-label-list li {
+	background-color: #ed9d07;
+	margin-top: 0;
+}
+.case-import .case-title-term {
+	margin-top: 20px;
+	border-top: 1px solid #e8e8e8;
+}
+.case-import .form-label-w {
+	width: 65px;
+}
+.case-import .form-box-time {
+	width: 220px;
+	cursor: pointer;
+}
+.case-import .case-range-input {
+	width: 30px;
+	margin-right: 8px;
+}
+.case-import .ul-li-mt li {
+	margin-top: 10px;
+}
+.case-import .case-address-btn {
+	background-color: #4c72d5;
+	color: #fff;
+	border-radius: 4px;
+}
+.case-import .case-btn-group {
+	text-align: center;
+	padding: 20px 0;
+}
+.case-import .case-btn-group .btn {
+	background-color: #4c72d5;
+	color: #fff;
+	border-radius: 4px;
+}
+
+/*查看统计 start*/
+.import-statistics {
+	position: absolute;
+	width: 340px;
+	right: 30px;
+	top: 10px;
+	bottom: 40px;
+	background-color: #fff;
+	z-index: 20;
+	padding: 20px;
+	border-bottom: 3px solid #4272be;
+}
+.statistics-list {
+	padding-bottom: 30px;
+}
+.import-statistics h5 {
+	font-size: 15px;
+	color: #4a4a4a;
+	padding-bottom: 20px;
+}
+.import-statistics h5 span {
+	color: #9a9a9a;
+}
+.import-statistics .statistics-num-text li {
+	float: left;
+	width: 50%;
+	padding-left: 50px;
+	height: 50px;
+	text-indent: 15px;
+	position: relative;
+}
+.import-statistics .statistics-num-text li i {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	background: url('/casedetection/images/icon.png') no-repeat -20px -206px;
+}
+.import-statistics .statistics-num {
+	line-height: 30px;
+	font-size: 16px;
+	color: #343434;
+}
+.statistics-close {
+	position: absolute;
+	top: 0;
+    right: 0;
+    z-index: 3;
+    width: 45px;
+    height: 40px;
+    line-height: 38px;
+    color: #d6dcec;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.import-statistics .statistics-pass-num {
+	width: 45%;
+	float: right;
+}
+.import-statistics li.statistics-pass-num i {
+	background-position: -90px -206px;
+}
+.import-statistics .statistics-text {
+	color: #666;
+	line-height: 20px;
+}
+
+
+.progress-list {
+}
+.progress-list li {
+	margin-bottom: 15px;
+	color: #656565;
+}
+.progress-list li span {
+	display: inline-block;
+	width: 69px;
+}
+.pl-progress {
+	width: 200px;
+	padding: 0 10px;
+	display: inline-block;
+}
+.progress-list .progress {
+	width: 100%!important;
+	height: 6px;
+	border-radius: 0;
+	margin-right: 0!important;
+	margin-top: -2px!important;
+	background-color: #e7e5e6;
+}
+.progress-list .progress-bar {
+	background: #4c72d5!important;
+}
+.progress-list .percentage {
+	display: none;
+}
+/*查看统计 end*/
+/* 输入模型条件 case-import end */
+
+
+/*案发前后过车行为分析 start*/
+
+.history-list-tab {
+	min-height: 600px;
+    background: #e7ecf0;
+}
+
+
+
+/*案发前后过车行为分析 end*/
+
+
+/* 模型分析 分布研判 tab start */
+.analyse-tab-box {
+	padding-top: 20px;
+	position: relative;
+}
+.analyse-setup {
+	float: right;
+	color: #999;
+	padding-right: 20px;
+	cursor: pointer;
+}
+.analyse-setup i {
+	display: inline-block;
+	width: 16px;
+	vertical-align: middle;
+	height: 16px;
+	margin: -3px 5px 0 0;
+	background: url('/casedetection/images/icon.png') no-repeat -654px -31px;
+}
+.analyse-tab-box .analyse-tab-wrap {
+	width: 60px;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	float: left;
+}
+.analyse-tab-box .analyse-tab-list {
+	position: relative;
+	text-align: center;
+	z-index: 10;
+	margin-bottom: 140px;
+	cursor: pointer;
+}
+
+.analyse-tab-box .tab-circle {
+	width: 24px;
+	height: 24px;
+	border: 1px solid #e8e8e8;
+	border-radius: 100%;
+	background-color: #fff;
+	line-height: 24px;
+	display: block;
+	margin-left: 17px;
+	font-size: 16px;
+	position: relative;
+	z-index: 10;
+	text-align: center; 
+}
+.analyse-tab-box .active .tab-circle {
+	border-color: #fff;
+	box-shadow: 0 0 10px rgba(74, 114, 212, .5);
+}
+.analyse-tab-box .active-has .tab-circle {
+	  background: url(../images/icon.png) no-repeat;
+    background-position: -292px -155px;
+    border-color: #4c72d5;
+}
+.analyse-tab-box .tab-circle i {
+	display: none;
+	width: 100%;
+    height: 100%;
+    line-height: 22px;
+    background-color: #4c72d7;
+    color: #fff;
+    border-radius: 100%;
+    font-weight: lighter;
+}
+.analyse-tab-box .active .tab-circle:after {
+	content: '';
+	display: block;
+	margin: 6px auto 0;
+	width: 10px;
+	height: 10px;
+	background-color: #4c72d7;
+	border-radius: 100%;
+}
+.analyse-tab-box .analyse-tab-line:after {
+	content: '';
+    width: 2px;
+    height: 146px;
+    background-color: #e8e8e8;
+    position: absolute;
+    left: 28px;
+    top: 18px;
+    z-index: 9;
+}
+.analyse-tab-box .active-has:after {
+	background-color: #4c72d5;
+}
+/* 模型分析 分布研判 tab end */
+
+
+/* 模型分析 分布研判 说明 start */
+.analyse-title-text {
+	padding-right: 15px;
+}
+.analyse-title-text li {
+	height: 164px;
+}
+.analyse-title {
+	line-height: 24px;
+	color: #333;
+	display: block;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+.analyse-text {
+	color: #989898;
+}
+.analyse-btns {
+	text-align: center;
+}
+.analyse-btn {
+	display: inline-block;
+	width: 80px;
+	margin: 0 5px;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #4c72d5;
+}
+.analyse-btn.analyse-prev {
+	background-color: #fff;
+	border: 1px solid  #4c72d5;
+	color: #4c72d5;
+}
+.analyse-prev:hover {
+	color: #4c72d5;
+}
+.analyse-next:hover {
+	color: #fff;
+}
+.export-result-btn {
+	width: 170px;
+	margin: 0 auto;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #4c72d5;
+}
+.export-result-btn:hover {
+	color: #fff;
+}
+/* 模型分析 分布研判 说明 end */
+
+/* 模型分析 分布研判 检索条件 start */
+.search-terms-wrap {
+	position: relative;
+	background-color: #fff;
+	padding: 6px 20px 10px;
+}
+.match-terms-wrap .filter-view {
+	padding: 6px 0 12px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.search-terms-wrap .filter-tag {
+}
+.search-terms-wrap .filter-arrt-set .filter-arrt {
+	width: 170px;
+}
+.search-terms-wrap .filter-arrt-set .filter-tag {
+	padding-top: 4px;
+}
+.search-terms-wrap .search-terms-input {
+	width: 28px;
+	height: 28px;
+	color: #333;
+	padding: 2px 4px;
+	margin: 0 8px;
+	text-align: center;
+	border: 1px solid #e8e8e8;
+}
+
+
+
+.search-terms-wrap .history-filter-tag {
+	padding-top: 4px;
+}
+
+
+.h-line {
+	background-color: #e7ecf0;
+    height: 30px;
+    width: 120%;
+    margin-left: -20px;
+}
+
+.result-nodata-wrap {
+	background-color: #fff;
+	padding: 20px 11px;
+	position: relative;
+	min-height: 200px;
+}
+.result-nodata-wrap .nodata {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.similar-step-wrap .confirm-btn,
+.fake-deck-terms .confirm-btn {
+	top: 15px;
+}
+.similar-step-wrap .search-terms-wrap .filter-bar {
+	padding: 0;
+}
+/* 模型分析 分布研判 检索条件 end */
+
+
+
+
+/* 模型分析 一步研判 start */
+.onestep-analyse {
+	/*background: url(/casedetection/images/wave.png) no-repeat left bottom;*/
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #fff;
+	overflow: hidden;
+}
+.progress-bg {
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	margin-left: -450px;
+	width: 990px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #e6e6e6;
+}
+.progress-value {
+	overflow: visible!important;
+	width: 2%;
+	position: absolute;
+	height: 100%;
+	border-radius: 15px;
+	background-image: -webkit-linear-gradient(left, #65d1f7, #2358c9); 
+	background-image: -moz-linear-gradient(left, #65d1f7, #2358c9); 
+	background-image: -ms-linear-gradient(left, #65d1f7, #2358c9); 
+	background-image: -o-linear-gradient(left, #65d1f7, #2358c9); 
+}
+.progress-value img {
+	position: absolute;
+	right: -44px;
+    top: -9px;
+	width: 55px;
+}
+.progress-value .progress-num {
+	position: absolute;
+	right: -60px;
+    top: -75px;
+    width: 78px;
+    height: 56px;
+    background: url(/casedetection/images/progress-tips.png) no-repeat left bottom;
+}
+.progress-value .progress-num b {
+	font-size: 14px;
+	display: block;
+	text-align: center;
+	font-weight: normal;
+	line-height: 42px;
+	color: #343434;
+	text-indent: 4px;
+}
+.progress-cancle {
+	position: absolute;
+	right: -80px;
+    top: 6px;
+    color: #999;
+    text-decoration: underline;
+}
+.progress-text {
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	width: 200px;
+	margin-left: -100px;
+	text-align: center;
+	color: #4b72d7;
+	font-size: 24px;
+}
+
+.wave-img-wrap {
+	position: absolute;
+	height: 329px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+}
+.wave-img-wrap .wave-img {
+	position: absolute;
+	height: 329px;
+	bottom: 50px;
+	left: 50%;
+	transform-origin: center center;
+    transition: transform ease .1s;
+    transform: rotateX(0) translateX(-50%);
+}
+.wave-title-wrap {
+	position: absolute;
+	bottom: 0;
+	/*bottom: -165px;*/
+	left: 50%;
+	margin-left: -445px;
+	width: 1200px;
+	height: 329px;
+}
+.wave-title {
+	height: 34px;
+	line-height: 34px;
+	color: #fff;
+	padding: 0 15px;
+	position: absolute;
+	bottom: -200px;
+	left: -100px;
+	background-color: #4b73d3;
+	border-radius: 3px;
+	transform-origin: left center;
+    transition: transform .3s ease;
+    transform: rotateY(90deg);
+}
+.wave-title:after {
+	content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-left: 8px solid #4b73d3;
+
+}
+.wave-up .wave-title,
+.wave-down .wave-title {
+	transform: rotateY(0);
+}
+.wave-up .wave-title-0 {
+	left: 0;
+	bottom: 320px;
+}
+.wave-up .wave-title-1 {
+	left: 300px;
+	bottom: 200px;
+}
+.wave-up .wave-title-2 {
+	left: 620px;
+	bottom: 300px;
+}
+.wave-up .wave-title-3 {
+	left: 920px;
+    bottom: 200px;
+}
+.wave-down .wave-title-0 {
+	left: 0;
+	bottom: 100px;
+}
+.wave-down .wave-title-1 {
+	left: 300px;
+	bottom: 200px;
+}
+.wave-down .wave-title-2 {
+	left: 620px;
+	bottom: 160px;
+}
+.wave-down .wave-title-3 {
+	left: 920px;
+    bottom: 260px;
+}
+/* 模型分析 一步研判 end */
+
+
+
+/* 车档对比分析 start */
+.fake-deck-result .tilelist {
+	/*padding: 20px 17px;*/
+}
+.fake-deck-terms .filter-bar {
+	padding: 8px 0;
+}
+.fake-deck-terms {
+	padding: 0 20px;
+}
+.fake-deck-terms .filter-arrt {
+	width: 50px;
+}
+/* 车档对比分析 end */
+
+
+
+
+/* 输出研判结果 start */
+.case-final-result {
+	background-color: #fff;
+	left: 15px;
+	right: 15px;
+}
+.case-final-result .nodata {
+	background-color: #fff;
+}
+/* 输出研判结果 end */
+
+.list-node .icon-content{
+	margin-top: 10px;
+	height: 30px;
+}
+
+.list-node .icon-content .icon {
+
+	float: right;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+
+.list-node .icon-content .icon-search {
+	background: url("../aliImage/search.png") no-repeat;
+	background-size: 18px 18px;
+	background-position: center;
+}
+
+.list-node .icon-content .icon-fenlei {
+	background: url("../aliImage/分类1.png") no-repeat;
+	background-size: 18px 18px;
+	background-position: center;
+
+}
+ .list-node .icon-content .icon-address {
+	 background: url("../aliImage/地址1.png") no-repeat;
+	 background-size: 18px 18px;
+	 background-position: center;
+ }
+.list-node .icon-content .icon-n {
+	background: url("../aliImage/icon-N.png") no-repeat;
+	background-size: 18px 18px;
+	background-position: center;
+}
+
+.analyse-step-wrap .select-cart-tab {
+	height: 45px;
+	width: 100%;
+	background: #eeeeee;
+}
+.analyse-step-wrap .select-cart-tab .cart-jia {
+	display: inline-block;
+	width: 70px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 10px;
+	text-align: center;
+	border-top: 1px solid blue;
+	background: white;
+
+}
+.analyse-step-wrap .select-cart-tab .cart-tou {
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	line-height: 45px;
+	padding: 0 10px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+

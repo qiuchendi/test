@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匹配模式</title>
+    <!--<link rel="stylesheet/less" type="text/css" href="../less/base.less">-->
+    <!--<link rel="stylesheet"  href ="https://at.alicdn.com/t/font_576277_4fmgkjes0mgqfr.css">-->
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+
+    <!--<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="/ui/plugins/font-images/font.css" />
+    <!--<link rel="stylesheet" type="text/css" href="/ui/plugins/bootstrap4.0/css/bootstrap.css"/>-->
+
+    <link rel="stylesheet" type="text/css" href=".././css/common.css" />
+    <link rel="stylesheet" type="text/css" href=".././css/caseList.css"/>
+    <link rel="stylesheet" type="text/css" href=".././css/mapLayer.css"/>
+    <link rel="stylesheet" type="text/css" href=".././css/header.css"/>
+    <link rel="stylesheet" type="text/css" href=".././css/reset.css"/>
+
+</head>
+<body>
+   <div class="top-bar-head">
+       <div class="header-more">
+           <span></span>
+       </div>
+       <div class="header-logo">
+           <span class="logo"></span>
+           <h1>视频云+大数据应用平台</h1>
+       </div>
+       <dl class="header-pane header-nav">
+           <dd><a>立体化防控</a></dd>
+           <dd><a>资源检索</a></dd>
+           <dd><a>布防布控</a></dd>
+           <dd><a>告警查询</a></dd>
+           <dd><a>智能挖掘</a></dd>
+           <dd><a>一人一档</a></dd>
+           <dd><a>统计分析</a></dd>
+           <dd><a>运维管理</a></dd>
+           <dd><a>绩效设计</a></dd>
+       </dl>
+       <ul class="header-pane header-right">
+           <li><span>一键禁用</span><i class="icon fa  fa-toggle-on"></i></li>
+           <li><i class="icon-item  fa  fa-user-o" style="font-size: 16px"></i><span>系统管理员</span></li>
+           <li><i class="icon-item  fa  fa-power-off"  style="font-size: 18px"></i></li>
+       </ul>
+   </div>
+
+   <div class="case-header">
+       <div class="case-back-title">
+           <span class="case-back-btn">返回</span>
+           <span class="case-header-title" id="openIframe">聚合研判</span>
+       </div>
+       <div class="case-tab-box">
+           <ul class="clearfix case-tab-wrap" id="caseTab">
+               <li class="case-tab-list case-tab-match case-tab-line active" ref="caseMatch" step="0">
+                   <span class="tab-circle"><b>1</b></span>
+                   <b class="tab-text">匹配模型</b>
+               </li>
+               <li onclick="location.href='./输入模型.html'" class="case-tab-list case-tab-import case-tab-line"
+                   ref="caseImport" step="1">
+                   <span class="tab-circle"><b>2</b></span>
+                   <b class="tab-text">输入模型条件</b>
+               </li>
+               <li onclick="location.href='./模型分析.html'" class="case-tab-list case-tab-analyse case-tab-line"
+                   ref="caseAnalyse" step="2">
+                   <span class="tab-circle"><b>3</b></span>
+                   <b class="tab-text">模型分析</b>
+               </li>
+               <li onclick="location.href='./输出研判.html'" class="case-tab-list case-tab-export mr0"
+                   ref="caseFinalResult" step="3">
+                   <span class="tab-circle"><b>4</b></span>
+                   <b class="tab-text">输出研判结果</b>
+               </li>
+           </ul>
+           <!--<a href="javascirpt:void(0);" class="prev-next-step prev-step prevNextStep hide" id="prevStep"><i class="icon-arrow-left10"></i>返回步骤<span id="prevStepNum">1</span></a>-->
+           <!--<a href="javascirpt:void(0);" class="prev-next-step next-step prevNextStep hide" id="nextStep">进入步骤<span id="nextStepNum">2</span><i class="icon-uniE91A"></i></a>-->
+       </div>
+   </div>
+
+   <div class="case-content-wrap" id="caseContentWrap">
+       <div class="case-content case-match" id="caseMatch">
+           <div class="case-content-aside case-aside-style">
+               <h5>案件基本信息</h5>
+               <div class="form-box-wrap case-module-info">
+                   <ul class="case-info" id="caseInfo">
+                       <li class="form-box-list">
+                           <label>案件编号：</label>
+                           <span>A4401125100002018070031</span>
+                       </li>
+                       <li class="form-box-list">
+                           <label>警情编号：</label>
+                           <span>J440112510000201807000179</span>
+                       </li>
+                       <li class="form-box-list">
+                           <label>案件类别：</label>
+                           <span>网络诈骗案</span>
+                       </li>
+                       <li class="form-box-list">
+                           <label>案件起始时间：</label>
+                           <span> 2018-09-10 00:00:00</span>
+                       </li>
+                       <li class="form-box-list">
+                           <label>案件结束时间：</label>
+                           <span> 2018-09-10 12:00:00</span>
+                       </li>
+                       <li class="form-box-list">
+                           <label>案件地点：</label>
+                           <span>横沙社区</span>
+                       </li>
+                       <li class="form-box-list">
+                           <label class="brief-case-label">【简要案情】：</label>
+                           <span class="brief-case">2018年07月10日报警人周琰报称，2018年07月08日被对方以免费领取手机由诈骗，事主按对方要求通过微信支付二维码，被对方骗走了12500元到对方账号，交易单号：100001890118070710029112771942041505；交易单号：150222695118070810029112772049594505。事主银行卡中国银行账户：6217857500015735233，户名：付小云。</span>
+                       </li>
+                   </ul>
+                   <div class="case-label-wrap hide" id="caseLabelWrap">
+                       <label>已选：</label>
+                       <ul class="case-label-list" id="caseLabelListWrap">
+                           <!-- <li>盗窃大宗物品</li> -->
+                       </ul>
+                   </div>
+               </div>
+           </div>
+           <div class="case-content-main">
+               <div class="search-terms-wrap match-terms-wrap">
+                   <div class="filter-view">
+                       <dl class="filter-bar border-none">
+                           <dt class="filter-arrt"></dt>
+                           <dd class="filter-bar-search">
+                               <div class="fifler-group mr5">
+                                   <div class="search-box upload-img" clearsearchkey="true">
+                                       <input class="search-input" type="text" id="searchText"
+                                              placeholder="请输模型名称" maxlength="50">
+                                       <span class="icon-search2" id="searchBtn"></span>
+                                   </div>
+                               </div>
+                           </dd>
+                       </dl>
+                   </div>
+               </div>
+               <div class="case-item-wrap">
+                   <ul class="clearfix" id="caseModelList">
+
+                        <li class="case-item-list active" list-name="盗窃大宗物品">
+                           <div  class="list-title-text">
+                               <div class="list-title"><span class="type-steal">盗</span>盗窃大宗物品</div>
+                               <p class="list-text">依据类案特点结合案件时空信息，智能挖掘潜在嫌疑车辆</p>
+                           </div>
+                       </li>
+                       <li class="case-item-list" list-name="模式识别">
+                           <div  class="list-title-text">
+                               <div class="list-title"><span class="type-module">模</span>模式识别</div>
+                               <p class="list-text">简要介绍一下盗窃大宗物品是什么模型</p>
+                           </div>
+                       </li>
+                       <li class="case-item-list" list-name="自然语言处理">
+                           <div  class="list-title-text">
+                               <div class="list-title"><span class="type-nature">自</span>自然语言处理</div>
+                               <p class="list-text">简要介绍一下盗窃大宗物品是什么模型</p>
+                           </div>
+                       </li>
+                       <li class="case-item-list" list-name="区域链">
+                           <div  class="list-title-text">
+                               <div class="list-title"><span class="type-area">区</span>区域链</div>
+                               <p class="list-text">简要介绍一下盗窃大宗物品是什么模型</p>
+                           </div>
+                       </li>
+                       <li class="case-item-list" list-name="一带一路">
+                           <div  class="list-title-text">
+                               <div class="list-title"><span class="type-yi">一</span>一带一路</div>
+                               <p class="list-text">简要介绍一下盗窃大宗物品是什么模型</p>
+                           </div>
+                       </li>
+                   </ul>
+               </div>
+               <div class="case-confirm">
+                   <button class="btn case-confirm-btn" id="caseConfirmBtn"
+                           onclick="location.href='./输入模型.html'">确定
+                   </button>
+               </div>
+           </div>
+       </div>
+
+   </div>
+
+</body>
+
+<script type="text/javascript" src="/ui/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/ui/plugins/eapui/eapui.js"></script>
+
+<script src="../jsOther/less.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/caseList.js"></script>
+
+
+
+
+</html>

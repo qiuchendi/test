@@ -1,0 +1,31 @@
+
+/* 结构布局 start */
+.pager-wrap {
+    overflow: auto;
+    background: #f7f7f7;
+    height: 100%;
+}
+
+.true-plate-detail {
+	padding: 20px 30px;
+	background-color: #f7f7f7;
+}
+.true-plate-list {
+	width: 33%;
+	float: left;
+	line-height: 40px;
+	color: #999;
+	text-indent: 10px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list-bgfff {
+	background-color: #fff;
+}
+.true-plate-list label {
+	font-weight: normal;
+}
+.true-plate-list span {
+	color: #333;
+}

@@ -1,0 +1,32 @@
+
+.frame-side {
+	width: 280px;
+}
+.frame-con {
+	z-index: 1;
+	left: 280px;
+}
+.map-con {
+    position: absolute;
+    left: 280px;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+
+.width210 .frame-side,
+.width210 .frame-con {
+	width: 220px;
+}
+.width210 .map-con {
+	left: 220px;
+}
+
+/* 无轨迹播放 start */
+.leaflet-bottom.leaflet-right {
+    display: none;
+}
+/* 无轨迹播放 end */

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输出研判</title>
+    <!--<link rel="stylesheet/less" type="text/css" href="../less/base.less">-->
+    <!--<link rel="stylesheet"  href ="https://at.alicdn.com/t/font_576277_4fmgkjes0mgqfr.css">-->
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+    <script type="text/javascript" src="../jsOther/jquery.min.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!--<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href=".././css/common.css" />
+    <link rel="stylesheet" type="text/css" href=".././css/caseList.css"/>
+    <link rel="stylesheet" type="text/css" href=".././css/mapLayer.css"/>
+    <link rel="stylesheet" type="text/css" href=".././css/header.css"/>
+    <link rel="stylesheet" type="text/css" href=".././css/reset.css"/>
+</head>
+<body>
+   <div class="top-bar-head">
+       <div class="header-more">
+           <span></span>
+       </div>
+       <div class="header-logo">
+           <span class="logo"></span>
+           <h1>视频云+大数据应用平台</h1>
+       </div>
+       <dl class="header-pane header-nav">
+           <dd><a>立体化防控</a></dd>
+           <dd><a>资源检索</a></dd>
+           <dd><a>布防布控</a></dd>
+           <dd><a>告警查询</a></dd>
+           <dd><a>智能挖掘</a></dd>
+           <dd><a>一人一档</a></dd>
+           <dd><a>统计分析</a></dd>
+           <dd><a>运维管理</a></dd>
+           <dd><a>绩效设计</a></dd>
+       </dl>
+       <ul class="header-pane header-right">
+           <li><span>一键禁用</span><i class="icon fa  fa-toggle-on"></i></li>
+           <li><i class="icon-item  fa  fa-user-o" style="font-size: 16px"></i><span>系统管理员</span></li>
+           <li><i class="icon-item  fa  fa-power-off"  style="font-size: 18px"></i></li>
+       </ul>
+   </div>
+
+   <div class="case-header">
+       <div class="case-back-title">
+           <span class="case-back-btn">返回</span>
+           <span class="case-header-title" id="openIframe">聚合研判</span>
+       </div>
+       <div class="case-tab-box">
+           <ul class="clearfix case-tab-wrap" id="caseTab">
+               <li onclick="location.href='./匹配模型.html'" class="case-tab-list case-tab-match case-tab-line"
+                   ref="caseMatch" step="0">
+                   <span class="tab-circle"><b>1</b></span>
+                   <b class="tab-text">匹配模型</b>
+               </li>
+               <li onclick="location.href='./输入模型.html'" class="case-tab-list case-tab-import case-tab-line"
+                   ref="caseImport" step="1">
+                   <span class="tab-circle"><b>2</b></span>
+                   <b class="tab-text">输入模型条件</b>
+               </li>
+               <li onclick="location.href='./模型分析.html'" class="case-tab-list case-tab-analyse case-tab-line"
+                   ref="caseAnalyse" step="2">
+                   <span class="tab-circle"><b>3</b></span>
+                   <b class="tab-text">模型分析</b>
+               </li>
+               <li class="case-tab-list case-tab-export mr0 active" ref="caseFinalResult" step="3">
+                   <span class="tab-circle"><b>4</b></span>
+                   <b class="tab-text">输出研判结果</b>
+               </li>
+           </ul>
+           <a href="javascirpt:void(0);" class="prev-next-step prev-step prevNextStep hide" id="prevStep"><i class="icon-arrow-left10"></i>返回步骤<span id="prevStepNum">1</span></a>
+           <a href="javascirpt:void(0);" class="prev-next-step next-step prevNextStep hide" id="nextStep">进入步骤<span id="nextStepNum">2</span><i class="icon-uniE91A"></i></a>
+       </div>
+   </div>
+
+   <div class="case-content case-final-result" id="caseFinalResult" ui-control="listview" ui-service="vehicle/analysis/similarVehicleAnalysis" ui-template="finalResultTmpl" ui-parameters="similarForm" ui-options="{unload: true}">
+
+       <!-- 检索条件设置 start -->
+       <div class="search-terms-wrap fake-deck-terms">
+           <div class="filter-view">
+               <dl class="filter-bar border-none">
+                   <dt class="filter-arrt">筛选：</dt>
+                   <dd class="filter-tag">
+                       <div class="tagslist" id="finalResultFD">
+                           <span class="tag-item active">全部</span>
+                           <span class="tag-item" data-id="1">假牌车</span>
+                           <span class="tag-item" data-id="2">套牌车</span>
+                       </div>
+                   </dd>
+               </dl>
+           </div>
+           <button class="btn confirm-btn" id="finalResultConfirm">确认检索</button>
+       </div>
+       <!-- 检索条件设置 end -->
+
+
+       <div class="page-info-metro square-pager full">
+           <div class="page-data fr" listview-page="">
+               <a class="page-prev fl disable" listview-prev-btn="" href="#"><i class="icon-arrow-left7"></i></a>
+               <span class="page-num">共有 <i class="page-num" listview-counts="">0</i>条记录,</span>
+               <a class="current-page"><i listview-current="">1</i>/<i listview-total="">1</i></a>
+               <a class="page-next fr disable" listview-next-btn="" href="#"><i class="icon-arrow-right7"></i></a>
+           </div>
+       </div>
+
+
+       <div class="analyse-step-wrap">
+           <div class="select-cart-tab">
+               <span class="cart-jia">假牌车</span>
+               <span class="cart-tou">套牌车</span>
+           </div>
+
+           <div class="tilelist vertical final-result-wrap result-nodata-wrap" id="fakeDeckWrap">
+
+               <div class="nodata"></div>
+               <div class="list-node-wrap" listview-item="0">
+                   <dl class="list-node picMessage">
+                       <div class="hide {%= o.situation == 1 ? 'false-identification' : 'true-identification'  %}"></div>
+                       <div class="is-key-car {%= o.isHasKeyCar == 2 ? 'hide' : ''  %}">
+                           <i class="icon-star5"></i>
+                       </div>
+                       <dt class="node-img" style="display: flex">
+                           <img class="one-image" src="../dashujImage/car-w.png">
+                           <img class="one-image" src="../dashujImage/car-w.png">
+                       </dt>
+                       <dd class="node-text">
+                           <p class="similar-name">
+                               <label>车牌号码：</label>
+                               <span class="plate-wrap plate-color {%= renderPlateColor(o.plateColor) %}">粤A610L2</span>
+                           </p>
+                           <p>
+                               <label>车辆品牌：</label>
+                               <span title="{%= o.carLogo %}-{%= o.carSeries %}-{%= o.carModel %}">本田-凌派-2016</span>
+                           </p>
+                           <p>
+                               <label>车辆颜色：</label>
+                               <span>黑色</span>
+                           </p>
+                           <p>
+                               <label>时间：</label>
+                               <span>2018-06-22</span>
+                           </p>
+                           <p>
+                               <label>地点：</label>
+                               <span>停车场入口</span>
+                           </p>
+                       </dd>
+                       <p class="icon-content" onclick="location.href='./综合查询.html'">
+                           <span class="icon-n icon"></span>
+                           <span class="icon-address icon"></span>
+                           <span class="icon-fenlei icon"></span>
+                           <span class="icon-search icon"></span>
+                       </p>
+                   </dl>
+               </div>
+           </div>
+
+       </div>
+   </div>
+
+
+</body>
+
+<script src="../jsOther/less.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/caseList.js"></script>
+<script type="text/javascript" src="../js/analyseTwo.js"></script>
+<script type="text/javascript" src="../js/caseList.js"></script>
+<script type="text/javascript" src="../js/analyseThree.js"></script>
+
+<script type="text/javascript" src="../js/initJsMap.js"></script>
+<script type="text/javascript" src="../js/tacticsFrame.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+
+
+
+</html>

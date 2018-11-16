@@ -1,0 +1,32 @@
+.pager-wrap {
+	overflow-x: hidden;
+	/*background-color: #eef0f2;*/
+	background-color: #fff;
+}
+
+.vehicle-detail {
+	margin: 0;
+	padding: 10px 0 5px;
+}
+.vehicle-detail li {
+	color: #999;
+	float: left;
+	width: 30%;
+}
+.vehicle-detail li span {
+	color: #333;
+	display: inline-block;
+	padding: 2px 6px;
+}
+.plate-color-detail {
+	color: #fff;
+	background-color: #4c72d5;
+	border-radius: 4px;
+}
+
+
+.history-detail-tab .tilelist {
+	background-color: #fff;
+	/*margin-top: 20px;*/
+	padding: 20px 10px;
+}

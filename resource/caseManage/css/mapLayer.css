@@ -1,0 +1,77 @@
+@charset 'utf-8';
+.leaflet-container a.leaflet-popup-close-button{
+	z-index:99;
+	position:absolute;
+	right:10px;
+	top:0px;
+	color: #2A58AD;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration:none;
+    font-weight: normal;
+    top: 9px;
+    right: 13px;
+}
+.leaflet-popup-content{
+	margin-right:30px;
+}
+
+.maplayer-wrap{
+	/* padding: 0px 19px 15px 19px; */
+	/* font-weight:normal; */
+}
+.maplayer-wrap .layer{
+	position:relative;
+	background: transparent;
+	opacity: 1;
+}
+.maplayer-wrap .layer:after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    width: 60px;
+    height: 95px;
+    background: url(/portal/images/map/popup.png) no-repeat;
+    background-position: -655px -185px;
+}
+.maplayer-wrap .layer-caption {
+    position: static;
+    width: 100%;
+    height: 20px;
+    border:none;
+}
+.maplayer-wrap  .layer-caption .title {
+    padding-left: 5px;
+    font-size: 14px;
+    position: relative;
+    float: left;
+    /* margin-top: 7px; */
+    margin-left: 8px;
+    line-height: 20px;
+}
+.layer-caption .title:after {
+    content: ' ';
+    display: block;
+    width: 4px;
+    height: 20px;
+    background-color: #3361b7;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: -8px;
+}
+
+.main-msg{
+	padding-top: 10px;
+}
+.main-msg.left-msg img{
+	width:auto;
+	height:80px;
+	max-width:100%;
+	display: block;
+	margin: 0 auto;
+}
+.main-msg.left-msg p{
+	margin:10px 0;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    /**
+     * jsonP请求原理
+     * 1. 给服务端传递回调的函数名称,window全局申明该回调函数
+     * 2.动态创建script标签,script,设置绑定url,+callbaci加回调函数名称,
+     * 监听script加载事件,再删除全局函数和变量,
+     * 往html添加script标签,目的是为了发送请求
+     *
+     * hase 跨域
+     * a页面通过iframe嵌入跨域的b页面,
+
+     *
+     *
+     * repaint
+     * reflow 重排触发条件
+     * 窗口的拖拉,window.resieze, dom添加,删除,样式修改宽高,默认字体,都会重排,
+     */
+
+
+    let str = '5.4'
+
+    let reg = /^([1-4](\.\d{1,2})?$)|^(5)(\.0)?$/
+     let bool = reg.test(str)
+    console.log(bool)
+
+
+
+
+    // jsonP实现原理
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

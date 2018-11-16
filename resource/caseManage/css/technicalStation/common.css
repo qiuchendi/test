@@ -1,0 +1,24 @@
+
+
+
+.pager-wrap {
+	background-color: #fff;
+}
+.nodata {
+	background-color: #ececec;
+}
+
+
+/* 超过长度截取为省略号 start */
+.ellipsis-list {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    position: absolute;
+    left: 69px;
+    right: 0;
+}
+/* 超过长度截取为省略号 end */
+
+

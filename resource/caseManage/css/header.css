@@ -1,0 +1,151 @@
+
+
+.top-bar-head{
+  height: 68px;
+  position: fixed;
+  background: #2B3245;
+  top: 0;
+  right: 0;
+  min-width: 1300px;
+  left: 0;
+  z-index: 1000;
+}
+.header-more{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  width: 68px;
+  height: 100%;
+  line-height: 80px;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: #223256;
+  float: left;
+}
+.header-more span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url('../aliImage/九点.png') no-repeat;
+  background-size: 28px 28px;
+  background-position: center;
+}
+.header-logo{
+  margin: 0;
+  padding-left: 30px;
+  display: inline-block;
+  background: #2F4471;
+  padding-right: 30px;
+}
+
+.header-logo .logo {
+  display: inline-block;
+  width: 41px;
+  height: 36px;
+  background: url('../aliImage/国徽2.png') no-repeat;
+  background-size: 36px 36px;
+  background-position: center;
+  float: left;
+  margin-top: 18px;
+  margin-right: 16px;
+}
+.header-logo h1 {
+  verflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  float: left;
+  display: inline-block;
+  height: 100%;
+  line-height: 68px;
+  margin: 0;
+  color: #E1E6DF;
+  font-size: 16px;
+  font-family: 'Microsoft YaHei'
+}
+.header-nav {
+  padding-left: 30px;
+  height: 100%;
+}
+.header-nav dd {
+  float: left;
+  cursor: pointer;
+  height: 100%;
+}
+
+.header-nav dd a{
+  color: #fff;
+  padding: 26px 10px 25px 0;
+}
+.header-pane {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+.header-pane a {
+  display: block;
+  width: 100%;
+  padding: 24px 15px;
+  text-decoration: none;
+  font-size: 13px;
+  position: relative;
+}
+.header-right {
+  height: 100%;
+  margin: 0;
+  float: right;
+  padding-left: 5px;
+
+}
+
+.header-right li{
+  float: left;
+  cursor: pointer;
+  height: 100%;
+  line-height: 68px;
+  color: white;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+.header-right li .icon {
+  font-size: 18px;
+  display: inline-block;
+}
+
+.header-right li span {
+  font-size: 14px;
+  display: inline-block;
+}
+
+.header-right li .fa {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: red;
+}
+.header-right li .fa-toggle-on {
+  background: url('../aliImage/开关2.png') no-repeat;
+  background-size: 25px 25px;
+  background-position: center;
+  margin-left: 10px;
+}
+
+.header-right li .fa-user-o {
+  background: url('../aliImage/用户.png') no-repeat;
+  background-size: 18px 18px;
+  background-position: center;
+}
+.header-right li .fa-power-off {
+  background: url('../aliImage/开关.png') no-repeat;
+  background-size: 22px 22px;
+  background-position: center;
+}
+
+
+
+
+
+

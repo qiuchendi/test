@@ -1,0 +1,111 @@
+
+/* 结构布局 start */
+.pager-wrap {
+    overflow: auto;
+    background: #f7f7f7;
+    height: 100%;
+    position: relative;
+}
+
+
+.setup-tab{
+	border-bottom: 1px solid #e8e8e8;
+	margin: 0;
+	background-color: #fff;
+}
+.setup-tab li {
+	float: left;
+	padding: 0 20px;
+	height: 36px;
+	color: #666;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+.setup-tab .tab-right-bd:after {
+	content: '';
+	position: absolute;
+	height: 16px;
+	width: 1px;
+	top: 10px;
+	background-color: #e8e8e8;
+	right: 0;
+}
+.setup-tab li span {
+	display: block;
+	line-height: 16px;
+	margin-top: 10px;
+	position: relative;
+}
+.setup-tab .active span {
+	color: #4c72d5;
+}
+.setup-tab .active span:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	left: 0;
+	background-color: #4c72d5;
+	bottom: -10px;
+}
+
+
+.setup-tab-content .search-terms-wrap {
+    position: relative;
+    padding: 6px 10px 10px 40px;
+}
+.setup-tab-content .search-terms-wrap .v-tag-item {
+	display: inline-block;
+	margin: 0 0 10px 0;
+	width: 33%;
+}
+.setup-tab-content .search-terms-wrap .v-tag-item input {
+	margin: -3px 5px 0 0;
+	vertical-align: middle;
+}
+.setup-tab-content .v-tag-item label {
+	font-weight: normal;
+}
+.setup-tab-content .search-terms-wrap .filter-bar {
+	border-bottom: none;
+}
+.setup-tab-content .search-terms-wrap .filter-arrt {
+	width: auto;
+	max-width: 170px;
+	color: #999;
+}
+.setup-tab-content .search-terms-wrap .filter-tag  {
+	width: auto;
+	color: #666;
+}
+.setup-tab-content .search-terms-wrap .v-filter-tag {
+	width: 80%;
+	padding-top: 10px;
+}
+.setup-tab-content .search-terms-input {
+    width: 30px;
+    height: 28px;
+    color: #333;
+    padding: 2px 0;
+    margin: 0 8px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+}
+.setup-tab-content .filter-tag {
+    padding-top: 4px;
+}
+.form-box-time {
+	width: 170px;
+	height: 28px;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+    padding: 4px 6px;
+    background: url(../../images/clock.png) no-repeat 96% 5px !important;
+}
+.time-gap {
+	margin: 0 10px;
+}
+.height20px {
+	height: 20px;
+}

@@ -1,0 +1,47 @@
+
+body {
+	overflow-y: auto;
+	background-color: #fff;
+}
+
+
+.frequency-analyse-wrap {
+	padding: 0 20px;
+}
+.frequency-analyse-wrap .plate-color {
+	padding: 3px 6px;
+}
+.frequency-analyse-wrap li {
+	padding-top: 20px;
+	position: relative;
+	cursor: pointer;
+}
+.frequency-analyse-wrap li .plate-color {
+	line-height: normal;
+	color: #fff;
+}
+
+
+.bayonet-wrap {
+	padding: 20px;
+}
+.bayonet-wrap .list-dot {
+	margin-right: 5px;
+}
+.bayonet-wrap .bayonet-num {
+	color: #ffa336;
+	margin-left: 5px;
+	font-weight: normal;
+}
+.bayonet-wrap dt {
+	padding-bottom: 10px;
+}
+.bayonet-wrap dd {
+	color: #333;
+	padding: 5px 0;
+}
+
+
+
+
+
